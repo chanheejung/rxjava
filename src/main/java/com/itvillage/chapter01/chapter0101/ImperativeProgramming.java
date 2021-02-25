@@ -3,6 +3,9 @@ package com.itvillage.chapter01.chapter0101;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 명령형 프로그래밍의 예시
+ */
 public class ImperativeProgramming {
     public static void main(String[] args){
         // List에 있는 숫자들 중에서 6보다 큰 홀수들의 합계를 구하세요.

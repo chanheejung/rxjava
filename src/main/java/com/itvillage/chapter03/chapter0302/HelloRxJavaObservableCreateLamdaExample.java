@@ -10,8 +10,8 @@ public class HelloRxJavaObservableCreateLamdaExample {
         Observable<String> observable =
                 Observable.create(emitter -> {
                     String[] datas = {"Hello", "RxJava!"};
-                    for(String data : datas){
-                        if(emitter.isDisposed())
+                    for (String data : datas) {
+                        if (emitter.isDisposed())
                             return;
 
                         emitter.onNext(data);
@@ -24,9 +24,9 @@ public class HelloRxJavaObservableCreateLamdaExample {
                         data -> Logger.log(LogType.ON_NEXT, data),
                         error -> Logger.log(LogType.ON_ERROR, error),
                         () -> Logger.log(LogType.ON_COMPLETE),
-                disposable -> {/**아무것도 하지 않는다.*/}
-        );
+                        disposable -> {/**아무것도 하지 않는다.*/}
+                );
 
-         Thread.sleep(500L);
+        Thread.sleep(500L);
     }
 }

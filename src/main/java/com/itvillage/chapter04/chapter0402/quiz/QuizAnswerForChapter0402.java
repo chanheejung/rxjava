@@ -12,6 +12,43 @@ import java.util.function.*;
  */
 public class QuizAnswerForChapter0402 {
     public static void main(String[] args) {
+        Predicate<String> pp = String::isEmpty;
+        System.out.println("Result1 : " + pp.test("11"));
+
+        // 문제 2번
+        Function<Integer, String> two = i -> String.valueOf(i);
+        Function<Integer, String> two2 = String::valueOf;
+        System.out.println("Result2 : " + two2.apply(11));
+
+        // 문제 3번
+        BiPredicate<List<Integer>, Integer> three = (list, num) -> list.contains(num);
+        BiPredicate<List<Integer>, Integer> three2 = List::contains;
+        System.out.println("Result3 : " + three2.test(Arrays.asList(11,22,33),11));
+
+        //문제 4번
+        Consumer<String> four = s -> System.out.println(s);
+        Consumer<String> four2 = System.out::println;
+        four2.accept("Result4 ");
+
+        // 문제 5번
+        BiFunction<String, CarType, Car> five = (s, carType) -> new Car(s, carType);
+        BiFunction<String, CarType, Car> five2 = Car::new;
+        Car fiveCar = five.apply("NewCar", CarType.SEDAN);
+        System.out.println("Result5 : " + fiveCar.getCarName());
+
+
+
+
+        System.out.println("\n\n\n\n\n\n\n\n\n");
+
+
+
+
+
+
+
+
+
         // 문제 1번
         Predicate<String> p1 = s -> s.isEmpty();
 
