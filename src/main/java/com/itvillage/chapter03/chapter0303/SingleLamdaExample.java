@@ -7,6 +7,9 @@ import io.reactivex.Single;
 
 import java.util.Calendar;
 
+/**
+ * Single 클래스를 사용하여 현재 날짜와 시각을 통지하는 예제 (람다)
+ */
 public class SingleLamdaExample {
     public static void main(String[] args){
         Single<String> single = Single.create(emitter -> emitter.onSuccess(DateUtil.getNowDate()));

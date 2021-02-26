@@ -16,6 +16,7 @@ import java.util.logging.SimpleFormatter;
 
 /**
  * Single 클래스를 사용하여 현재 날짜와 시각을 통지하는 예제
+ *  * SingleLamdaExample에서 람다 형식으로 구현
  */
 public class SingleCreateExample {
     public static void main(String[] args){

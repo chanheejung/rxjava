@@ -1,4 +1,4 @@
-package com.itvillage.chapter05.chapter0501;
+package com.itvillage.chapter05.chapter0501.future.common;
 
 import com.itvillage.utils.LogType;
 import com.itvillage.utils.Logger;

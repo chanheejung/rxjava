@@ -7,6 +7,9 @@ import io.reactivex.Maybe;
 import io.reactivex.Observable;
 import javafx.beans.value.ObservableBooleanValue;
 
+/**
+ * Maybe.empty()로 1건도 통지하지 않고, 완료 처리하는 예제
+ */
 public class MaybeJustExample {
     public static void main(String[] args){
 //        Maybe.just(DateUtil.getNowDate())

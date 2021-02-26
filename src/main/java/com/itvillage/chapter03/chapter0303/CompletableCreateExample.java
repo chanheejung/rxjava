@@ -12,6 +12,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * Completable 을 사용하여 어떤 작업을 수행한 후, 완료를 통지하는 예제
+ *  * 람다 예제는 CompletableLamdaExample
  */
 public class CompletableCreateExample {
     public static void main(String[] args) throws InterruptedException {
