@@ -22,7 +22,7 @@ public class BackpressureBufferExample01 {
                         () -> Logger.log("overflow!"),
                         BackpressureOverflowStrategy.DROP_LATEST)
                 .doOnNext(data -> Logger.log("#onBackpressureBuffer doOnNext()", data))
-                .observeOn(Schedulers.computation(), false, 1)
+                .observeOn(Schedulers.computation(), false, 1) //1은 소비자가 요청한 갯수
                 .subscribe(
                         data -> {
                             TimeUtil.sleep(1000L);

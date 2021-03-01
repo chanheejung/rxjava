@@ -19,6 +19,7 @@ public class MaybeJustExample {
 //                        () -> Logger.log(LogType.ON_COMPLETE)
 //                );
 
+        // 데이터 통지 없이 onComplete() 수행
         Maybe.empty()
                 .subscribe(
                         data -> Logger.log(LogType.ON_SUCCESS, data),

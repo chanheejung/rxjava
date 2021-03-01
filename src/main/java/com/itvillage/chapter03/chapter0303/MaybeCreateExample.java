@@ -17,7 +17,10 @@ public class MaybeCreateExample {
         Maybe<String> maybe = Maybe.create(new MaybeOnSubscribe<String>() {
             @Override
             public void subscribe(MaybeEmitter<String> emitter) throws Exception {
+                // onSuccess()가 수행되면, onComplete() 수행없이 종료 된다.
 //                emitter.onSuccess(DateUtil.getNowDate());
+
+                // onSuccess()가 수행되지 않으면, onComplete() 수행 된다.
 
                 emitter.onComplete();
             }
