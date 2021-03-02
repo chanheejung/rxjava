@@ -12,9 +12,10 @@ public class ObservableRetryExample01 {
         Observable.just(5)
                 .flatMap(
                         num -> Observable
-                                .interval(200L, TimeUnit.MILLISECONDS)
+                                .interval(200L, TimeUnit.MILLISECONDS) /** 0.2초 간격으로 0부터 통지*/
                                 .map(i -> {
                                     long result;
+                                    // 일반적으로 map내부에서 try~catch를 사용하지 않지만, retry 동작을 잘 보여주기 위한 예시이다.
                                     try{
                                         result = num / i;
                                     }catch(ArithmeticException ex){

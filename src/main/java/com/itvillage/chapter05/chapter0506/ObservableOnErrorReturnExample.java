@@ -34,6 +34,7 @@ public class ObservableOnErrorReturnExample {
                             else
                                 Logger.log(LogType.ON_NEXT, data);
                         },
+                        /** onErrorReturn에서 적절한 처리를 한다. OnError가 발생하지 않는다. */
                         error -> Logger.log(LogType.ON_ERROR, error),
                         () -> Logger.log(LogType.ON_COMPLETE)
                 );

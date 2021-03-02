@@ -21,7 +21,9 @@ public class ObservableConcatExample01 {
                         .take(5)
                         .map(num -> num + 1000);
 
+        /** 아래 2줄의 결과를 비교해본다. */
         Observable.concat(observable2, observable1)
+//        Observable.concat(observable2, observable1)
                 .subscribe(data -> Logger.log(LogType.ON_NEXT, data));
 
 

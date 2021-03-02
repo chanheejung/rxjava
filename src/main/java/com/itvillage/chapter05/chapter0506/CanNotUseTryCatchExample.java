@@ -7,6 +7,9 @@ import io.reactivex.Observable;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * RXJava에서 try ~ catch를 사용 없음
+ */
 public class CanNotUseTryCatchExample {
     public static void main(String[] args) {
         try{

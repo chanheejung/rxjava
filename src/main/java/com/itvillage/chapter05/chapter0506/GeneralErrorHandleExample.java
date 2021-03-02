@@ -25,6 +25,7 @@ public class GeneralErrorHandleExample {
                         .map(i -> num / i))
                 .subscribe(
                         data -> Logger.log(LogType.ON_NEXT, data),
+                        /** 에러에 대한 처리 */
                         error -> Logger.log(LogType.ON_ERROR, error),
                         () -> Logger.log(LogType.ON_COMPLETE)
                 );

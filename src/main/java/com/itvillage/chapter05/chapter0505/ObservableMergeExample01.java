@@ -19,6 +19,7 @@ public class ObservableMergeExample01 {
                 .take(5)
                 .map(num -> num + 1000);
 
+        /** 통지 시간이 같을 경우 merge 함수의 파라미터로 먼저 지정된 Oversable의 데이터 부터 통지 된다.*/
         Observable.merge(observable1, observable2)
                 .subscribe(data -> Logger.log(LogType.ON_NEXT, data));
 

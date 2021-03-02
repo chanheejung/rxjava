@@ -27,8 +27,10 @@ public class ObservableRetryExample02 {
                                     }
                                     return result;
                                 })
+                                /** retryCount:재시도횟수, ex:예외*/
                                 .retry((retryCount, ex) -> {
                                     Logger.log(LogType.PRINT, "# 재시도 횟수: " + retryCount);
+                                    // 서버-클라이언트 요청의 재처리시 일정간격을 준다.
                                     TimeUtil.sleep(1000L);
                                     return retryCount < RETRY_MAX ? true : false;
                                 })

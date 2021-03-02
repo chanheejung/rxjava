@@ -19,6 +19,7 @@ public class ObservableOnErrorResumeNextExample {
                         .map(i -> num / i)
                         .onErrorResumeNext(throwable -> {
                             Logger.log(LogType.PRINT, "# 운영자에게 이메일 발송: " + throwable.getMessage());
+                            /** Observable을 리턴 : 1을 skip하고 처리하도록 재생성 */
                             return Observable.interval(200L,TimeUnit.MILLISECONDS).take(5).skip(1).map(i -> num / i);
                         })
                 ).subscribe(data -> Logger.log(LogType.ON_NEXT, data));
