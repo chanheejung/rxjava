@@ -1,14 +1,16 @@
-package com.itvillage.rxjava2.section00.d;
+package com.itvillage.rxjava2.section01_Processor.c;
 
 import com.itvillage.utils.LogType;
 import com.itvillage.utils.Logger;
-import io.reactivex.subjects.ReplaySubject;
+import io.reactivex.subjects.BehaviorSubject;
 
-public class ReplaySubjectExample01 {
+/**
+ * 구독 시점에 이미 통지된 데이터가 있다면 이미 통지된 데이터의 마지막 데이터를 전달 받은 후,
+ * 구독 이후부터 통지 된 데이터를 전달 받는 예제
+ */
+public class BehaviorSubjectExample {
     public static void main(String[] args){
-        ReplaySubject<Integer> subject = ReplaySubject.create();
-        subject.onNext(3000);
-        subject.onNext(2500);
+        BehaviorSubject<Integer> subject = BehaviorSubject.createDefault(3000);
 
         subject.subscribe(price -> Logger.log(LogType.ON_NEXT, "# 소비자 1 : " + price));
         subject.onNext(3500);
@@ -16,9 +18,7 @@ public class ReplaySubjectExample01 {
         subject.subscribe(price -> Logger.log(LogType.ON_NEXT, "# 소비자 2 : " + price));
         subject.onNext(3300);
 
-        subject.onComplete();
-
         subject.subscribe(price -> Logger.log(LogType.ON_NEXT, "# 소비자 3 : " + price));
-
+        subject.onNext(3400);
     }
 }

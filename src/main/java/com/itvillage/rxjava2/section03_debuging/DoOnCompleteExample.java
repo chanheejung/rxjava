@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section02;
+package com.itvillage.rxjava2.section03_debuging;
 
 import com.itvillage.utils.LogType;
 import com.itvillage.utils.Logger;

@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section03;
+package com.itvillage.rxjava2.section04_test;
 
 public class Calculator {
     private int sum;

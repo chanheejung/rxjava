@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section01;
+package com.itvillage.rxjava2.section02_schduler.c_newthread;
 
 import com.itvillage.utils.LogType;
 import com.itvillage.utils.Logger;
@@ -14,10 +14,12 @@ public class SchedulerNewThreadExample {
     public static void main(String[] args) {
         Observable<String> observable = Observable.just("1", "2", "3", "4", "5");
 
+        /* 1번째 구독 */
         observable.subscribeOn(Schedulers.newThread())
                 .map(data -> "## " + data + " ##")
                 .subscribe(data -> Logger.log(LogType.ON_NEXT, data));
 
+        /* 2번째 구독 */
         observable.subscribeOn(Schedulers.newThread())
                 .map(data -> "$$ " + data + " $$")
                 .subscribe(data -> Logger.log(LogType.ON_NEXT, data));

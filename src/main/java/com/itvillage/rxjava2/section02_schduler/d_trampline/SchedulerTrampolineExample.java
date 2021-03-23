@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section01;
+package com.itvillage.rxjava2.section02_schduler.d_trampline;
 
 import com.itvillage.utils.LogType;
 import com.itvillage.utils.Logger;
