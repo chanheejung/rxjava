@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section04_test.g;
+package com.itvillage.rxjava2.section04_test.h_BlockingSubscribe;
 
 import com.itvillage.rxjava2.section04_test.Calculator;
 import com.itvillage.rxjava2.section04_test.SampleObservable;
