@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section05_test;
+package com.itvillage.rxjava2.section05_test.a;
 
 import com.itvillage.common.Car;
 import com.itvillage.rxjava2.section04_test.SampleObservable;
@@ -19,7 +19,7 @@ public class AssertEmptyTest {
         Observable<Car> observable = SampleObservable.getCarStream();
         TestObserver<Car> observer = observable.test();
 
-        // then
+        // then 0.1초의 대기 시간동안 통지 받는다.
         observer.awaitDone(100L, TimeUnit.MILLISECONDS).assertEmpty();
     }
 
@@ -28,9 +28,11 @@ public class AssertEmptyTest {
     public void getCarStreamEmptySuccessTest(){
         // when
         Observable<Car> observable = SampleObservable.getCarStream();
+        // 1초 동안 통지를 지연 시킨다.
         TestObserver<Car> observer = observable.delay(1000L, TimeUnit.MILLISECONDS).test();
 
         // then
+        // 0.1초안에는 통지되는 데이터가 없기에 assertEmpty()는 성공한다.
         observer.awaitDone(100L, TimeUnit.MILLISECONDS).assertEmpty();
     }
 }

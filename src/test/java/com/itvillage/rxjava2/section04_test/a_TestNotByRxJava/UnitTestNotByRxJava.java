@@ -1,6 +1,7 @@
-package com.itvillage.rxjava2.section04_test;
+package com.itvillage.rxjava2.section04_test.a_TestNotByRxJava;
 
 import com.itvillage.common.CarMaker;
+import com.itvillage.rxjava2.section04_test.SampleObservable;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

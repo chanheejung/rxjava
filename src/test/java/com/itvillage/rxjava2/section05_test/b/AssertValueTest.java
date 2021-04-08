@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section05_test;
+package com.itvillage.rxjava2.section05_test.b;
 
 import com.itvillage.common.CarMaker;
 import com.itvillage.rxjava2.section04_test.SampleObservable;
@@ -23,6 +23,7 @@ public class AssertValueTest {
         SampleObservable.getCarMakerStream()
                 .filter(carMaker -> carMaker.equals(CarMaker.SAMSUNG))
                 .test()
+                // 생성자에서 Schedulers.computation()로 별도의 함수로 실행하기 때문에 약간의 대기가 필요
                 .awaitDone(1L, TimeUnit.MILLISECONDS)
                 .assertValue(CarMaker.SAMSUNG);
     }

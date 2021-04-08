@@ -1,5 +1,6 @@
-package com.itvillage.rxjava2.section04_test;
+package com.itvillage.rxjava2.section04_test.e_BlockingGet;
 
+import com.itvillage.rxjava2.section04_test.SampleObservable;
 import io.reactivex.Observable;
 import org.junit.Test;
 

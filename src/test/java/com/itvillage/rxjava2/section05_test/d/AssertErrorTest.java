@@ -1,4 +1,4 @@
-package com.itvillage.rxjava2.section05_test;
+package com.itvillage.rxjava2.section05_test.d;
 
 import com.itvillage.rxjava2.section04_test.RxJavaTest;
 import io.reactivex.Observable;

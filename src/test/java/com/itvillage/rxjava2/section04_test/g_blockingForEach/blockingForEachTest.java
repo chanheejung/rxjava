@@ -1,5 +1,6 @@
-package com.itvillage.rxjava2.section04_test;
+package com.itvillage.rxjava2.section04_test.g_blockingForEach;
 
+import com.itvillage.rxjava2.section04_test.SampleObservable;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.greaterThan;
